@@ -1,0 +1,351 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #e5cabe;
+  color: #000;
+}
+
+header{
+  background-color: #fff;
+  padding: 2px;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+footer{
+  background-color: #999;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+h1{
+  font-size: 30px;
+  color: #222;
+}
+
+section{
+  margin: auto;
+  padding: 30px;
+  max-width: 1300px;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "regiondata" "regiondata"
+    "regiondata" "regiondata"
+    "practices" "hsites"
+    "practices" "hsites"
+    "practices" "hsites"
+}
+
+h2{
+  font-size: 70px;
+  text-align: center;
+  font-family: 'Volkhov', serif;
+  background-color: #999;
+  color: #000;
+  margin: 0;
+  padding: 20px;
+}
+
+
+img.flag{
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #999;
+}
+
+#regioninfo{
+  margin-top: 20px;
+}
+
+a{
+  color: #fff;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.random{
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.sitebody, .culturebody{
+  background-color: #a0a2a5;
+  padding: 15px;
+}
+
+#hsites, #regiondata{
+  background-color: #fff;
+  padding: 40px;
+}
+
+#traveldata, #practices{
+  padding: 30px;
+  border-style: solid;
+  border-width: 15px;
+  border-color: #fff;
+}
+
+.searchbox{
+  max-width: 600px;
+  margin: auto;
+  margin-top: 80px;
+  background-color: #fff;
+  padding: 150px;
+}
+
+#message{
+  margin-top: 10px;
+}
+
+#home{
+  font-size: 15px;
+  max-width: 1300px;
+  margin: auto;
+  text-align: right;
+  margin-top: 15px;
+  padding-right: 30px;
+}
+
+a:link{
+  color: #000;
+}
+
+a:hover{
+  color:#7a2a42;
+}
+
+a:visited{
+  color: #894a5d;
+}
+
+.subhead{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@media (max-width: 1050px) {
+  section{
+    margin: auto;
+    padding: 20px;
+    max-width: 850px;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "regiondata" "traveldata"
+      "regiondata" "traveldata"
+      "practices" "hsites"
+      "practices" "hsites"
+      "practices" "hsites"
+  }
+  img.flag{
+    margin: auto;
+    max-width: 275px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #999;
+  }
+  #home{
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 910px) {
+  section{
+    margin: auto;
+    padding: 20px;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "regiondata"
+      "traveldata"
+      "hsites"
+      "practices"
+  }
+  #home{
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 750px) {
+  section{
+    margin: auto;
+    padding: 20px;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "regiondata"
+      "traveldata"
+      "hsites"
+      "practices"
+  }
+  h2{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Volkhov', serif;
+    background-color: #999;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+  }
+  #home{
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 675px) {
+  .searchbox{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: #fff;
+    padding: 125px;
+  }
+  section{
+    margin: auto;
+    padding: 10px;
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "regiondata"
+      "traveldata"
+      "hsites"
+      "practices"
+  }
+
+  h2{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Volkhov', serif;
+    background-color: #999;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    max-width: 450px;
+    margin: auto;
+  }
+  img.flag{
+    display: block;
+    margin: auto;
+    max-width: 300px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #999;
+  }
+  #home{
+    max-width: 450px;
+  }
+
+
+}
+
+@media (max-width: 550px) {
+  .searchbox{
+    max-width: 400px;
+    margin: auto;
+    margin-top: 110px;
+    background-color: #fff;
+    padding: 80px;
+  }
+  section{
+    margin: auto;
+    padding: 10px;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "regiondata"
+      "traveldata"
+      "hsites"
+      "practices"
+  }
+  img.flag{
+    display: block;
+    margin: auto;
+    max-width: 260px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #999;
+  }
+  h2{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Volkhov', serif;
+    background-color: #999;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .searchbox{
+    max-width: 310px;
+    margin: auto;
+    margin-top: 110px;
+    background-color: #fff;
+    padding: 50px;
+  }
+  section{
+    margin: auto;
+    padding: 10px;
+    max-width: 315px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "regiondata"
+      "traveldata"
+      "hsites"
+      "practices"
+  }
+  img.flag{
+    display: block;
+    margin: auto;
+    max-width: 200px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #999;
+  }
+  h2{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Volkhov', serif;
+    background-color: #999;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    max-width: 315px;
+    margin: auto;
+  }
+}

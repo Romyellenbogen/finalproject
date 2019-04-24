@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Welcome to {{d['Name']}}</h2>
+<p id="home"><a href="/index.html">Go back home</a></p>
+<section>
+<div id="regiondata">
+	<img class="flag" src="{{d['Links']}}">
+	<div id="regioninfo">
+	<p class="bold">Region:</p><p class="region">{{d['Region']}}</p>
+	<p class="bold">Population:</p><p class="population">{{d['pop']}}</p>
+	<p class="bold">Languages spoken:</p> <p class="languages">{{d['Languages']}}</p>
+	<p class="bold">Major urban areas:</p><p class="urban">{{d['urban']}}</p>
+</div>
+</div>
+<div id="traveldata">
+	<p class="bold">Precaution:</p><p class="caution">{{d['Precaution']}}</p>
+	<p class="bold">Passport validity requirements:</p><p class="valid">{{d['valid']}}</p>
+	<p class="bold">Passport pages:</p><p class="pages">{{d['pages']}}</p>
+	<p class="bold">Tourist visa:</p><p class="visa">{{d['touristvisa']}}</p>
+	<p class="bold">Vaccinations:</p><p class="vax">{{d['vax']}}</p>
+	<p class="bold">Currency entry:</p><p class="entry">{{d['centry']}}</p>
+	<p class="bold">Currency exit:</p><p class="exit">{{d['cexit']}}</p>
+</div>
+<div id="practices">
+	<p class="title">Cultural practices</p>
+	<p class="subhead">Click the practices to expand</p>
+	<div id="culturepractice">
+		{% for culture in c  %}
+			<p class="culturename">{{culture['practice']}}</p>
+			<p class="culturebody">{{culture['summary']}}</p>
+		{% endfor %}
+	</div>
+</div>
+<div id="hsites">
+<p class="title">UNESCO Heritage Sites</p>
+<p class="subhead">Click the sites to expand</p>
+<div id="heritagesites">
+	{% for heritage in h  %}
+	<p class="sitename">{{heritage['site']}}</p>
+		<div class="sitebody">
+			<p>{{heritage['des']}}</p>
+			<p>Coordinates: {{heritage['coordinate']}}</p>
+			<p>Region: {{heritage['Region']}}</p>
+			<p>Date inscribed as a UNESCO site: {{heritage['date']}}</p>
+		</div>
+		{% endfor %}
+</div>
+</div>
+</section>
+<footer>
+	<p>This website was created by Romy Ellenbogen. See the code on GitHub</p>
+</footer>
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/js/main.js"></script>
+{% endblock %}

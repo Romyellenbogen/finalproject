@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Afghanistan</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	<link rel="stylesheet" href="../static/css/main.css">
+
+</head>
+<body>
+<h2>Welcome to Afghanistan</h2>
+<section>
+<div id="regiondata">
+	<img class="flag" src="../static/images/AF-flag.gif">
+	<p class="region"><p class="bold">Region:</p> Asia</p>
+	<p class="population"><p class="bold">Population:</p> 34,940,837</p>
+	<p class="languages"><p class="bold">Languages spoken:</p> Afghan Persian or Dari (official) 80% (Dari functions as the lingua franca), Pashto (official) 47%, Uzbek 11%</p>
+	<p class="urban"><p class="bold">Major urban areas:</p> 4.012 million KABUL (capital)</p>
+</div>
+<div id="traveldata">
+	<p class="caution"><p class="bold">Precaution:</p> Level 4: Do Not Travel</p>
+	<p class="valid"><p class="bold">Passport validity requirements:</p>Must be valid for six months at time of entry</p>
+	<p class="pages"><p class="bold">Passport pages:</p>One page required for entry stamp</p>
+	<p class="visa"><p class="bold">Tourist visa:</p>Yes</p>
+	<p class="vax"><p class="bold">Vaccinations:</p>Polio vaccination up to 1 year before travel is recommended. See the U.S. Centers for Disease Control and Prevention Fact Sheet</p>
+	<p class="entry"><p class="bold">Currency entry:</p>$20,000</p>
+	<p class="exit"><p class="bold">Currency exit:</p>$20,000</p>
+</div>
+<div id="locations">
+	<p class="title">Cultural practices:</p>
+	<div id="culturepractice">
+			<p class="culturename">Nawrouz</p>
+			<p class="culturebody">New Year is often a time when people wish for prosperity and new beginnings. March 21 marks the start of the year in Afghanistan, Azerbaijan, India, Iran (Islamic Republic of), Iraq, Kazakhstan, Kyrgyzstan, Pakistan, Tajikistan, Turkey, Turkmenistan and Uzbekistan. It is referred to as Nauryz, Navruz, Nawrouz, Nevruz, Nooruz, Novruz, Nowrouz or Nowruz meaning ‘new day’ when a variety of rituals, ceremonies and other cultural events take place for a period of about two weeks. An important tradition practised during this time is the gathering around ‘the Table’, decorated with objects that symbolize purity, brightness, livelihood and wealth, to enjoy a special meal with loved ones. New clothes are worn and visits made to relatives, particularly the elderly and neighbours. Gifts are exchanged, especially for children, featuring objects made by artisans. There are also street performances of music and dance, public rituals involving water and fire, traditional sports and the making of handicrafts. These practices support cultural diversity and tolerance and contribute to building community solidarity and peace. They are transmitted from older to younger generations through observation and participation.
+			</p>
+	</div>
+	<p class="title">UNESCO Heritage Sites:</p>
+	<div id="heritagesites">
+		<p class="sitename">Minaret and Archaeological Remains of Jam</p>
+			<div class="sitebody">
+				<p>The 65m-tall Minaret of Jam is a graceful, soaring structure, dating back to the 12th century. Covered in elaborate brickwork with a blue tile inscription at the top, it is noteworthy for the quality of its architecture and decoration, which represent the culmination of an architectural and artistic tradition in this region. Its impact is heightened by its dramatic setting, a deep river valley between towering mountains in the heart of the Ghur province. </p>
+				<p>N34 23 47.1 E64 30 57.2</p>
+				<p>Shahrak District, Ghur Province</p>
+				<p>Inscription date: 2002</p>
+			</div>
+		<p class="sitename">Cultural Landscape and Archaeological Remains of the Bamiyan Valley</p>
+		<div class="sitebody">
+			<p>The cultural landscape and archaeological remains of the Bamiyan Valley represent the artistic and religious developments which from the 1st to the 13th centuries characterized ancient Bakhtria, integrating various cultural influences into the Gandhara school of Buddhist art. The area contains numerous Buddhist monastic ensembles and sanctuaries, as well as fortified edifices from the Islamic period. The site is also testimony to the tragic destruction by the Taliban of the two standing Buddha statues, which shook the world in March 2001.</p>
+			<p>N34 50 48.984 E67 49 30.9</p>
+			<p>Bamiyan Province, Bamiyan District</p>
+			<p>Inscription date: 2003</p>
+		</div>
+	</div>
+</div>
+	<div id="map"></div>
+	<script>
+		var mymap = L.map('map').setView([24, 50], 6);
+		L.tileLayer('https://api.mapbox.com/styles/v1/romyellenbogen/cjorwmrg6152d2smhhalf8uqr/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoicm9teWVsbGVuYm9nZW4iLCJhIjoiY2pvcnVvcjMxMGpxazNrcGJldGtxNXF6eCJ9.jlA2yQG_YVY153_zyl3wMQ', {
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			maxZoom: 18
+		}).addTo(mymap);
+		var marker = L.marker([34.84694000, 67.82527778]).addTo(mymap);
+		marker.bindPopup("Bamiyan Valley").openPopup();
+</script>
+</section>
+<footer>
+	<p>This website was created by Romy Ellenbogen. See the code on GitHub</p>
+</footer>
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/js/main.js"></script>
+</body>
+</html>
