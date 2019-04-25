@@ -4,22 +4,16 @@ from modules import convert_to_dict
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import Required
-from flask_googlemaps import GoogleMaps
-from flask_googlemaps import Map
 
 
 app = Flask(__name__)
 
-Bootstrap(app)
-GoogleMaps(app)
+application = app
 
+
+Bootstrap(app)
 
 app.config['SECRET_KEY'] = '9iUH02Y7Dq'
-app.config['GOOGLEMAPS_KEY'] = "SrfGVDYqri"
-
-
-
-application = app
 
 destinations = convert_to_dict("destination.csv")
 cultures = convert_to_dict("culturePractice.csv")
